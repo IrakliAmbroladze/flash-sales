@@ -4,7 +4,7 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
-  max-width: 1170px;
+  max-width: 1300px;
   margin: auto;
 }
 .header,
@@ -73,5 +73,15 @@
   display: block;
 }
 .main {
+  display: flex;
+  justify-content: space-between;
   background-color: pink;
+  column-gap: 30px;
+}
+
+.card {
+  width: 270px;
+  height: 350px;
+  border: 1px solid red;
+  background-color: slategray;
 }

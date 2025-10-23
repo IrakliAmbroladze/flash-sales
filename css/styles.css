@@ -85,3 +85,17 @@
   border: 1px solid red;
   background-color: slategray;
 }
+
+.product-image {
+  width: 100%;
+  height: 250px;
+  background-color: forestgreen;
+  padding: 30px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}

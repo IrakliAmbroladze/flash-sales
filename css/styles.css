@@ -1,17 +1,30 @@
-.wrapper {
-  display: flex;
-  height: 100vh;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
-.main {
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  max-width: 1300px;
   margin: auto;
+}
+.header,
+.main {
+  width: 90%;
+}
+.header {
   display: flex;
   column-gap: 20px;
-  max-width: 1170px;
   align-items: center;
   justify-content: space-between;
 }
-.header {
+.title-content {
   display: flex;
   align-items: center;
   column-gap: 90px;
@@ -47,6 +60,7 @@
 .colon {
   color: red;
   font-size: 36px;
+  margin: 0 17px;
 }
 
 .title {
@@ -65,4 +79,105 @@
   padding: 11px;
   border-radius: 50%;
   display: block;
+}
+.main {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.card {
+  width: 270px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-image {
+  width: 100%;
+  height: 250px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 30px;
+  position: relative;
+}
+.product-image::before {
+  content: url("../images/icons/eye.svg");
+  position: absolute;
+
+  right: 8px;
+  top: 64px;
+}
+
+.product-image::after {
+  content: url("../images/icons/heart.svg");
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px 9px;
+  right: 8px;
+  top: 12px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  position: relative;
+}
+.sale {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #fff;
+  background-color: #db4444;
+  padding: 4px 12px;
+  border-radius: 4px;
+  line-height: 18px;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.card-content ul {
+  display: flex;
+  line-height: 20px;
+}
+.card-content img {
+  display: block;
+}
+.card-title,
+.price {
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.price {
+  color: red;
+}
+
+.star-count {
+  line-height: 21px;
+  opacity: 0.5;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }

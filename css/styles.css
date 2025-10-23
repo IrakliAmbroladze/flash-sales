@@ -8,11 +8,12 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
   max-width: 1300px;
   margin: auto;
+  padding-top: 20px;
 }
 .header,
 .main {
@@ -24,10 +25,19 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .header {
+    justify-content: space-around;
+  }
+  .title-content {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+}
 .title-content {
   display: flex;
   align-items: center;
-  column-gap: 90px;
+  column-gap: 70px;
 }
 .time {
   position: relative;
@@ -85,9 +95,15 @@ body {
   display: flex;
   justify-content: space-between;
   column-gap: 30px;
-  flex-wrap: wrap;
 }
 
+@media (max-width: 768px) {
+  .main {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
+  }
+}
 @media (max-width: 600px) {
   .main {
     flex-direction: column;
@@ -95,6 +111,18 @@ body {
   }
 }
 
+@media (max-width: 633px) {
+  .header {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .title {
+    font-size: 28px;
+  }
+  .time {
+    font-size: 20px;
+  }
+}
 .card {
   width: 270px;
   height: 350px;
